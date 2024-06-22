@@ -5,4 +5,11 @@ hours_worked = round(float(hours_worked_str),2)
 hourly_pay = round(float(hourly_pay_str),2)
 monthly_pay = hourly_pay * hours_worked * 4
 rent = round(float(input("In USD, how much do you pay in rent or mortgage each month? ")),2)
-print(f"This project is currently unfinished. For now, let's lay out the information provided. Your monthly pay is ${monthly_pay} and your rent/mortgage per month is ${rent}.")
+groceries = round(float(input("Rounding to the closest $50, how much do you spend on groceries per month? ")), 2)
+utilities = round(float(input("Regarding utility bills like water, A/C, gas, electric, and internet, how much do you spend on bills per month? ")), 2)
+misc_exp = round(float(input("We've accounted for rent, groceries, and utility bills. Rounded to the nearest $50, please enter the amount of money you spend, in USD, on any other monthly expenses. ")), 2)
+monthly_exp = rent + groceries + utilities + misc_exp
+money_left = round(float(monthly_pay - monthly_exp), 2)
+print(f"With what you've told me, your monthly pay is around {monthly_pay}, and your monthly expenses add up to around {monthly_exp}.")
+print(f"With this information in mind, your money left after your monthly expenses is approximately {money_left}. This is money you can be putting into savings or using for luxury items, leisure activities, or other non-essential expenses.")
+print(f"Thank you so much for your patience and participation. Have a wonderful day, {name}!")
